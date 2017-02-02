@@ -112,6 +112,7 @@
   <ItemGroup>
     <ClInclude Include="Component.h" />
     <ClInclude Include="ControlComponent.h" />
+    <ClInclude Include="ControlSystem.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="HealthComponent.h" />
     <ClInclude Include="HealthSystem.h" />

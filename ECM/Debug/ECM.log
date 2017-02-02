@@ -1,7 +1,9 @@
 ﻿  main.cpp
-c:\users\craig\desktop\ecm\ecm\healthsystem.h(16): warning C4018: '<': signed/unsigned mismatch
-c:\users\craig\desktop\ecm\ecm\healthsystem.h(19): warning C4018: '<': signed/unsigned mismatch
-c:\users\craig\desktop\ecm\ecm\positionsystem.h(16): warning C4018: '<': signed/unsigned mismatch
-c:\users\craig\desktop\ecm\ecm\positionsystem.h(19): warning C4018: '<': signed/unsigned mismatch
-  ECM.vcxproj -> C:\Users\craig\Desktop\ECM\ECM\Debug\ECM.exe
-  ECM.vcxproj -> C:\Users\craig\Desktop\ECM\ECM\Debug\ECM.pdb (Partial PDB)
+c:\users\craig\desktop\engineeringfsme\ecm\ecm\healthsystem.h(16): warning C4018: '<': signed/unsigned mismatch
+c:\users\craig\desktop\engineeringfsme\ecm\ecm\healthsystem.h(19): warning C4018: '<': signed/unsigned mismatch
+c:\users\craig\desktop\engineeringfsme\ecm\ecm\positionsystem.h(16): warning C4018: '<': signed/unsigned mismatch
+c:\users\craig\desktop\engineeringfsme\ecm\ecm\positionsystem.h(19): warning C4018: '<': signed/unsigned mismatch
+c:\users\craig\desktop\engineeringfsme\ecm\ecm\controlsystem.h(16): warning C4018: '<': signed/unsigned mismatch
+c:\users\craig\desktop\engineeringfsme\ecm\ecm\controlsystem.h(19): warning C4018: '<': signed/unsigned mismatch
+  ECM.vcxproj -> C:\Users\craig\Desktop\EngineeringFSME\ECM\ECM\Debug\ECM.exe
+  ECM.vcxproj -> C:\Users\craig\Desktop\EngineeringFSME\ECM\ECM\Debug\ECM.pdb (Partial PDB)

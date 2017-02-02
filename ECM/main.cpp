@@ -4,6 +4,7 @@
 #include "ControlComponent.h"
 #include "HealthSystem.h"
 #include "PositionSystem.h"
+#include "ControlSystem.h"
 
 int main()
 {
@@ -34,10 +35,14 @@ int main()
 	ps.addEntity(dog);
 	ps.addEntity(alien);
 
+	ControlSystem cs;
+	cs.addEntity(player);
+
 	while (true)
 	{
 		hs.update();
 		ps.update();
+		cs.update();
 
 		system("PAUSE");
 	}
