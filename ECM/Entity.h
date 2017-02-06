@@ -2,6 +2,7 @@
 #define ENTITY_H
 
 #include <vector>
+#include <map>
 #include "Component.h"
 
 using namespace std;
@@ -10,17 +11,29 @@ class Entity
 {	
 public:
 	Entity() {};
-	void addComponent(Component c) 
-	{ m_components.push_back(c); }
+	~Entity() { m_components.clear(); };
 
-	void removeComponent(Component c)
-	{ }
+	string name;
 
-	vector<Component> getComponents() const
-	{ return m_components; }
+	void addComponent(Component* c) 
+	{ m_components[c->getType()] = c; }
+
+	void removeComponent(std::string name)
+	{ m_components.erase(name); }
+
+	Component* getComponent(std::string name) {
+		map<std::string, Component*>::iterator it;
+		it = m_components.find(name);
+
+		if (it != m_components.end())
+		{
+			return it->second;
+		}
+		return NULL;
+	}
 
 private:
-	vector<Component> m_components;
+	map<std::string, Component*> m_components;
 protected:
 	int m_id;
 };

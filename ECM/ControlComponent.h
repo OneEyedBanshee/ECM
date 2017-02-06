@@ -6,7 +6,17 @@
 class ControlComponent : public Component
 {
 public:
-	ControlComponent() { m_type = "control"; }
+	ControlComponent() : 
+		m_keyPressed(false) 
+	{
+		m_type = "control";
+	}
+
+	int getKeyPressed() const { return m_keyPressed; }
+	void setKeyPressed(bool value) { m_keyPressed = value; }
+
+private:
+	bool m_keyPressed;
 };
 
 #endif

@@ -8,14 +8,14 @@ using namespace std;
 class Component
 {
 public:
-	Component() :m_type("") {}
+
+	Component() {}
 	~Component() {}
 
-	string getType() { return m_type; }
+	string getType() const { return m_type; }
 
-	string m_type;
 protected:
-	
+	string m_type;
 };
 
 #endif

@@ -2,42 +2,50 @@
 #include "HealthComponent.h"
 #include "PositionComponent.h"
 #include "ControlComponent.h"
-#include "HealthSystem.h"
-#include "PositionSystem.h"
+#include "ControlSystem.h"
+#include "RenderSystem.h"
+#include "AiSystem.h"
 
 int main()
 {
 	Entity player; Entity alien; Entity dog; Entity cat;
 
-	player.addComponent(HealthComponent());
-	player.addComponent(PositionComponent());
-	player.addComponent(ControlComponent());
+	player.addComponent(&HealthComponent());
+	player.addComponent(&PositionComponent());
+	player.addComponent(&ControlComponent());
+	player.name = "Player";
 
-	alien.addComponent(HealthComponent());
-	alien.addComponent(PositionComponent());
+	alien.addComponent(&HealthComponent());
+	alien.addComponent(&PositionComponent());
+	alien.name = "Alien";
 
-	dog.addComponent(HealthComponent());
-	dog.addComponent(PositionComponent());
+	dog.addComponent(&HealthComponent());
+	dog.addComponent(&PositionComponent());
+	dog.name = "Dog";
 
-	cat.addComponent(HealthComponent());
-	cat.addComponent(PositionComponent());
+	cat.addComponent(&HealthComponent());
+	cat.addComponent(&PositionComponent());
+	cat.name = "Cat";
 
-	HealthSystem hs;
-	hs.addEntity(player);
-	hs.addEntity(cat);
-	hs.addEntity(dog);
-	hs.addEntity(alien);
+	ControlSystem cs;
+	cs.addEntity(&player);
 
-	PositionSystem ps;
-	ps.addEntity(player);
-	ps.addEntity(cat);
-	ps.addEntity(dog);
-	ps.addEntity(alien);
+	RenderSystem rs;
+	rs.addEntity(&player);
+	rs.addEntity(&alien);
+	rs.addEntity(&dog);
+	rs.addEntity(&cat);
+
+	AiSystem as;
+	as.addEntity(&player);
+	as.addEntity(&alien);
+	as.addEntity(&dog);
 
 	while (true)
 	{
-		hs.update();
-		ps.update();
+		cs.update();
+		rs.update();
+		as.update();
 
 		system("PAUSE");
 	}
